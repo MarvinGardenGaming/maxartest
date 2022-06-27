@@ -67,7 +67,7 @@ require(["esri/config",
     var thisPoint = jsonResponseExample.coordinates[0][i];
 
     // if the min/max x/y values are null set them to first value returned else compare them to determine appropriate value. If it meets criteria update that value
-    if(minX == undefined || thisPoint[0] < minX){
+    if(!minX || thisPoint[0] < minX){
       minX = thisPoint[0];
     }
 
